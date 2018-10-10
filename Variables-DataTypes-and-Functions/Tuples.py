@@ -1,5 +1,5 @@
 '''
-Make a tuple and print the last item.
+Make a tuple and print the last item using indexing.
 '''
 tuple = ("Hello", 3, 4.6)
 print(tuple)
