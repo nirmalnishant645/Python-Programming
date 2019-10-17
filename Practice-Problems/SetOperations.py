@@ -1,7 +1,5 @@
-A = input("Enter the elements of the first Set: ").split()
-A = set(map(int, A))
-B = input("Enter the elements of the second Set: ").split()
-B = set(map(int, B))
+A = set(input("Enter the elements of the first Set: ").split())
+B = set(input("Enter the elements of the second Set: ").split())
 
 print("Set A =",A,"\nSet B =",B)
 
