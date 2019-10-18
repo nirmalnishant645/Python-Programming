@@ -1,0 +1,32 @@
+from tkinter import *
+window = Tk()
+window.title("Assignment 2")
+lbl1 = Label(window, text="Enter First Number: ")
+lbl1.grid(column=1, row=1)
+txt1 = Entry(window,width=10)
+txt1.grid(column=2, row=1)
+lbl2 = Label(window, text="Enter Second Number: ")
+lbl2.grid(column=1, row=2)
+txt2 = Entry(window,width=10)
+txt2.grid(column=2, row=2)
+lbl3 = Label(window, text="Result: ")
+lbl3.grid(column=1, row=3)
+txt3 = Entry(window,width=10)
+txt3.grid(column=2, row=3)
+def addF():
+    a = float(txt1.get())
+    b = float(txt2.get())
+    sum = a + b
+    txt3.delete(0, END)
+    txt3.insert(END, sum)
+def subF():
+    a = float(txt1.get())
+    b = float(txt2.get())
+    sub = a - b
+    txt3.delete(0, END)
+    txt3.insert(END, sub)
+add = Button(window, text="Add", command=addF)
+add.grid(column=1, row=4)
+add = Button(window, text="Subtract", command=subF)
+add.grid(column=2, row=4)
+window.mainloop()
