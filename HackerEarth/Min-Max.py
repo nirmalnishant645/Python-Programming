@@ -19,5 +19,27 @@ SAMPLE INPUT
 SAMPLE OUTPUT
 10 14
 '''
+def MinMax(series, n):
+    max = 0
+    min = series[0]
+    sum = 0
+    temp = 0
+    result = []
+    for i in range(0, n):
+        if series[i]>max:
+            max = series[i]
+        elif series[i]<min:
+            min = series[i]
+    for i in series:
+        sum+=i
+    temp = max
+    max = sum-min
+    min = sum-temp
+    result.append(min)
+    result.append(max)
+    return result
+
 n = int(input())
 series = list(map(int, input().split()))
+
+print(*MinMax(series, n))
