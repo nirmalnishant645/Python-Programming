@@ -13,6 +13,9 @@ def BinarySearch(arr, target):
         else:
             upper = mid-1
     return False
+   
+#Lower Mid = lower+(upper-lower)//2 or (lower+upper)//2
+#Upper Mid = lower+(upper-lower+1)//2
     
 #Best Case, target at arr[mid], Time Complexity O(1)
 #Worst Case, target not in arr[], Time Complexity log(n)
