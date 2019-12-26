@@ -9,11 +9,7 @@ def bubbleSort(arr):
                 flag = False
         if flag:
             break
-
-arr = [42,52,36,51,46,86,53,12]
-bubbleSort(arr)
-print(arr)
-
+            
 #Best Case, already sorted arr[], Time Complexity O(n)
 #Worst Case, arr[] sorted in opposite direction, Time Complexity O(n*n)
 #Average Case, Time Complexity O(n*n)
