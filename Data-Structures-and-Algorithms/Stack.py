@@ -1,32 +1,41 @@
-#Initializing an empty list
-stack = []
+class stack:
+    #initializing a list
+    arr = []
 
-#To push an element into the stack
-def push(item):
-    stack.append(item)
+    #To push an element into the Stack
+    def push(self, item):
+        self.arr.append(item)
 
-#Popping out the last element
-def pops():
-    return stack.pop() if len(stack) > 0 else None
+    #To check if the stack is empty
+    def isEmpty(self):
+        return self.arr == []
 
-#Printing the stack
-def display():
-    print(stack)
+    #To pop the last element off the stack
+    def pop(self):
+        return None if self.isEmpty() else self.arr.pop()
+
+    #To peek into the Stack
+    def peek(self):
+        return None if self.isEmpty() else self.arr[len(self.arr)-1]
 
 
-display()
-print('Pushing 1 into stack')
-push(1)
-display()
-print('Pushing 2 into stack')
-push(2)
-display()
-print('Popping out the last element from the stack')
-pops()
-display()
-print('Popping out the last element from the stack')
-pops()
-display()
-print('Popping out an element even though the stack is empty')
-pops()
-display()
+    #To display the whole Stack
+    def display(self):
+        print(self.arr)
+
+x = stack() #Creating an object of stack class
+x.display()
+print('Pushing 1 into the stack')
+x.push('1')
+x.display()
+print('Pushing 2 into the stack')
+x.push('2')
+x.display()
+print('Peeking into the top of the stack')
+x.peek()
+print('Popping the last element from the stack')
+x.pop()
+x.display()
+print('Popping the last element from the stack')
+x.pop()
+x.display()
