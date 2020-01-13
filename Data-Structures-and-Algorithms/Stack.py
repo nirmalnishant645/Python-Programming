@@ -1,5 +1,5 @@
 class stack:
-    #initializing a list
+    #Initializing a list
     arr = []
 
     #To push an element into the Stack
@@ -32,10 +32,14 @@ print('Pushing 2 into the stack')
 x.push('2')
 x.display()
 print('Peeking into the top of the stack')
-x.peek()
+print(x.peek())
 print('Popping the last element from the stack')
-x.pop()
+print(x.pop())
 x.display()
 print('Popping the last element from the stack')
-x.pop()
+print(x.pop())
 x.display()
+print('Checking if the stack is empty')
+print(x.isEmpty())
+print('Popping the stack even though it is empty')
+print(x.pop())
