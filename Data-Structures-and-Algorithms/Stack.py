@@ -8,7 +8,7 @@ class stack:
 
     #To check if the stack is empty
     def isEmpty(self):
-        return self.arr == []
+        return not self.arr
 
     #To pop the last element off the stack
     def pop(self):
@@ -16,7 +16,7 @@ class stack:
 
     #To peek into the Stack
     def peek(self):
-        return None if self.isEmpty() else self.arr[len(self.arr)-1]
+        return None if self.isEmpty() else self.arr[-1]
 
 
     #To display the whole Stack
