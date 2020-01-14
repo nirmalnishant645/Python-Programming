@@ -1,4 +1,4 @@
-class stack:
+class Stack:
     #Initializing a list
     arr = []
 
@@ -23,7 +23,7 @@ class stack:
     def display(self):
         print(self.arr)
 
-x = stack() #Creating an object of stack class
+x = Stack() #Creating an object of stack class
 x.display()
 print('Pushing 1 into the stack')
 x.push('1')
