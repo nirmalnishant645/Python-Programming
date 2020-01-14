@@ -16,34 +16,31 @@ class Queue:
 
     #Get the front item of the Queue
     def front(self):
-        return self.arr[0]
+        return None if self.isEmpty() else self.arr[0]
 
     #Get the last item from the queue
     def rear(self):
-        return self.arr[-1]
+        return None if self.isEmpty() else  self.arr[-1]
 
-    #To display the whole Stack
-    def display(self):
-        print(self.arr)
 
 x = Queue() #Creating an object of queue class
-x.display()
+print(x.arr)
 print('Enquing 1 into queue')
 x.enqueue('1')
-x.display()
+print(x.arr)
 print('Enquing 1 into queue')
 x.enqueue('2')
-x.display()
+print(x.arr)
 print('Peeking the front item of the queue')
 print(x.front())
 print('Peeking the rear item of the queue')
 print(x.rear())
 print('Dequing an item from the queue')
 print(x.dequeue())
-x.display()
+print(x.arr)
 print('Dequing an item from the queue')
 print(x.dequeue())
-x.display()
+print(x.arr)
 print('Checking if the queue is empty')
 print(x.isEmpty())
 print('Dequing an item from the queue even though the queue is empty')
