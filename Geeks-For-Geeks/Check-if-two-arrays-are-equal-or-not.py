@@ -37,13 +37,13 @@ Input : A[] = {1, 2, 5}; B[] = {2, 4, 15};
 Output : 0
 '''
 def equal(arr1, arr2):
-    res1 = res2 = sum1 = sum2 = 0
+    res = sum1 = sum2 = 0
     for i in range(len(arr1)):
-        res1 ^= arr1[i]
-        res2 ^= arr2[i]
+        res ^= arr1[i]
+        res ^= arr2[i]
         sum1 += arr1[i]
         sum2 += arr2[i]
-    return 1 if res1 == res2 and sum1 == sum2 else 0
+    return 1 if not res and sum1 == sum2 else 0
 
 t = int(input())
 while t > 0:
