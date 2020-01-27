@@ -37,11 +37,11 @@ Input : A[] = {1, 2, 5}; B[] = {2, 4, 15};
 Output : 0
 '''
 def equal(arr1, arr2):
-    res = 0
+    res1 = res2 = 0
     for i in range(len(arr1)):
-        res ^= arr1[i]
-        res ^= arr2[i]
-    return 0 if res else 1
+        res1 ^= arr1[i]
+        res2 ^= arr2[i]
+    return 1 if res1 == res2 else 0
 
 t = int(input())
 while t > 0:
