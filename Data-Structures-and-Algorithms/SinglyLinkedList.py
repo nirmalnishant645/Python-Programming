@@ -24,14 +24,13 @@ class Linked_list:
 			cur = cur.next
 		return total 
 
-	# Prints out the linked list in traditional Python list format. 
+	# Prints out the linked list. 
 	def display(self):
-		elems = []
 		cur_node = self.head
 		while cur_node.next != None:
 			cur_node = cur_node.next
-			elems.append(cur_node.data)
-		print(elems)
+			print(cur_node.data, end = " ")
+		print('')
 
 	# Returns the value of the node at 'index'. 
 	def get(self, index):
