@@ -1,18 +1,17 @@
-
-class node:
-	def __init__(self, data = None):
+class Node:
+	def __init__(self, data=None):
 		self.data = data
 		self.next = None
 
-class linked_list:
+class Linked_list:
 	def __init__(self):
-		self.head = node()
+		self.head = Node()
 
 	# Adds new node containing 'data' to the end of the linked list.
 	def append(self, data):
-		new_node = node(data)
+		new_node = Node(data)
 		cur = self.head
-		while cur.next != None:
+		while cur.next:
 			cur = cur.next
 		cur.next = new_node
 
@@ -51,7 +50,6 @@ class linked_list:
 	def erase(self, index):
 		if index >= self.length() or index < 0:
 			print("ERROR: 'Erase' Index out of range!")
-			return None
 		cur_idx = 0
 		cur_node = self.head
 		while True:
@@ -73,18 +71,15 @@ class linked_list:
 	If index is less than zero, warning will be printed to the user.
 	'''
 	def insert(self, index, data):
-	    if index < 0:
-	        print("ERROR: 'Insert' Index cannot be negative!")
-	        return None
-	    if index >= self.length():
-	        return self.append(data)
+	    if index >= self.length() or index < 0:
+	        print("ERROR: 'Insert' Index out of range!")
 	    cur_node = self.head
 	    prior_node = self.head
 	    cur_idx = 0
 	    while True:
 		    cur_node = cur_node.next
 		    if cur_idx == index: 
-			    new_node = node(data)
+			    new_node = Node(data)
 			    prior_node.next = new_node
 			    new_node.next = cur_node
 			    return None
@@ -101,7 +96,6 @@ class linked_list:
 	def set(self, index, data):
 	    if index >= self.length() or index < 0:
 	        print("ERROR: 'Set' Index out of range!")
-	        return None
 	    cur_node = self.head
 	    cur_idx = 0
 	    while True:
