@@ -16,10 +16,11 @@ For testing purposes change your function so it outputs the number of pairs
 
 def pair_sum(arr, k):
 
+    # Edge Case Check
     if len(arr) < 2:
         return
 
-    #Sets for tracking
+    # Sets for tracking
     seen = set()
     output = set()
 
@@ -32,6 +33,7 @@ def pair_sum(arr, k):
         else:
             output.add(((min(num, target)), max(num, target)))
 
+    print('\n'.join(map(str, list(output)))) # To print the pairs
     return len(output)
 
 
