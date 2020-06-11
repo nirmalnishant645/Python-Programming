@@ -14,6 +14,8 @@ Output:
     5 is the missing number.
 '''
 
+# Method 1 (Not Optimal)
+
 def finder(arr1, arr2):
 
     arr1.sort()
@@ -24,4 +26,19 @@ def finder(arr1, arr2):
             return num1
     return arr1[-1]
 
-print(finder([1,2,3,4,5,6,7], [3,7,2,1,4,6]))
+# Method 2
+
+import collections
+
+def finder(arr1, arr2):
+
+    d = collections.defaultdict(int)
+
+    for num in arr2:
+        d[num] += 1
+
+    for num in arr1:
+        if not d[num]:
+            return num
+        else:
+            d[num] -= 1
