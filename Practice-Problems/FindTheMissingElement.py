@@ -15,7 +15,7 @@ Output:
 '''
 
 # Method 1 (Not Optimal)
-
+'''
 def finder(arr1, arr2):
 
     arr1.sort()
@@ -42,3 +42,15 @@ def finder(arr1, arr2):
             return num
         else:
             d[num] -= 1
+'''
+# Method 3 (Using XOR)
+
+def finder(arr1, arr2):
+    result = 0
+
+    # Perform an XOR between the numbers in the arrays
+    for num in arr1 + arr2:
+        result ^= num
+        print(result)
+
+    return result
