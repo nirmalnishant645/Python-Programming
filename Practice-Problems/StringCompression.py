@@ -5,6 +5,8 @@ For this problem, you can falsely "compress" strings of single or double letters
 The function should also be case sensitive, so that a string 'AAAaaa' returns 'A3a3'.
 '''
 
+# Run Length Compression ALgorithm
+
 def compress(s):
     
     r = ""
