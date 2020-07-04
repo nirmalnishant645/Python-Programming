@@ -18,6 +18,5 @@ def uniq_char(s):
     for letter in s:
         if letter in chars:
             return False
-        else:
-            chars.add(letter)
+        chars.add(letter)
     return True
