@@ -1,3 +1,15 @@
+'''
+Last In First Out (LIFO)
+
+Stacks can be used to reverse the order of items.
+
+Example of stack in real world:
+Web Browser Back Button:
+As you navigate from web page to web page, those pages are placed on a stack (actually it is the URLs that are going in the stack).
+The current page that you are viewing is on the top and the first page you looked at is at the base.
+If you click on the Back Button, you begin to move in reverse order through pages.
+'''
+
 class Stack:
     #Initializing a list
     arr = []
