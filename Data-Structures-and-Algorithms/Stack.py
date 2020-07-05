@@ -24,10 +24,10 @@ class Stack(object):
         self.items.append(item) # It needs the item and returns nothing.
 
     def pop(self):  # Removes the top item from the stack.
-        return self.items.pop() # It needs no parameters and returns the item. Stack is modified.
+        return None if self.isEmpty else self.items.pop() # It needs no parameters and returns the item. Stack is modified.
 
     def peek(self): # Returns the top item from the stack but does not remove it.
-        return None if self.isEmpty() else self.items[len(self.items) - 1]  # It needs no parameters. The stack is not modified.
+        return None if self.isEmpty() else self.items[-1]  # It needs no parameters. The stack is not modified.
 
     def size(self): # Returns the number of items on the stack.
         return len(self.items)  # It needs no parameters and returns an integer.
