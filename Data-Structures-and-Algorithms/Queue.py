@@ -24,7 +24,7 @@ class Queue(object):
         return len(self.items)  # It needs no parameters and returns an integer value.
 
     def front(self):    # Returns the front item from the stack but does not remove it.
-        return None if self.isEmpty else self.items[0]  # It needs no parameters. The stack is not modified.
+        return None if self.isEmpty() else self.items[0]  # It needs no parameters. The stack is not modified.
 
     def rear(self): # Returns the rear item from the stack but does not remove it.
-        return None if self.isEmpty else self.items[-1]    # It needs no parameters. The stack is not modified.
+        return None if self.isEmpty() else self.items[-1]    # It needs no parameters. The stack is not modified.
