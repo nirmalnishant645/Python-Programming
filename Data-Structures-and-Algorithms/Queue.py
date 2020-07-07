@@ -3,50 +3,26 @@ FIRST IN FIRST OUT (FIFO)
 ENQUEUE - Adding a new item to the rear of the queue.
 DEQUEUE - Removing the front item from the queue.
 '''
-class Queue:
-    #Initializing list
-    arr = []
 
-    #Add an item into the queue
-    def enqueue(self, item):
-        self.arr.append(item)
+class Queue(object):
 
-    #To check if the queue is empty
+    def __init__(self):
+        self.items = []
+
     def isEmpty(self):
-        return not self.arr
+        return not self.items
 
-    #Remove an item from the queue
+    def enqueue(self, item):
+        return self.items.append(item)
+
     def dequeue(self):
-        return None if self.isEmpty() else self.arr.pop(0)
+        return None if self.isEmpty() else self.items.pop(0)
 
-    #Get the front item of the Queue
+    def size(self):
+        return len(self.items)
+
     def front(self):
-        return None if self.isEmpty() else self.arr[0]
+        return None if self.isEmpty else self.items[0]
 
-    #Get the last item from the queue
     def rear(self):
-        return None if self.isEmpty() else  self.arr[-1]
-
-
-x = Queue() #Creating an object of queue class
-print(x.arr)
-print('Enquing 1 into queue')
-x.enqueue('1')
-print(x.arr)
-print('Enquing 1 into queue')
-x.enqueue('2')
-print(x.arr)
-print('Peeking the front item of the queue')
-print(x.front())
-print('Peeking the rear item of the queue')
-print(x.rear())
-print('Dequing an item from the queue')
-print(x.dequeue())
-print(x.arr)
-print('Dequing an item from the queue')
-print(x.dequeue())
-print(x.arr)
-print('Checking if the queue is empty')
-print(x.isEmpty())
-print('Dequing an item from the queue even though the queue is empty')
-print(x.dequeue())
+        return None if self.isEmplty else self.items[-1]
