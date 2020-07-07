@@ -1,3 +1,8 @@
+'''
+FIRST IN FIRST OUT (FIFO)
+ENQUEUE - Adding a new item to the rear of the queue.
+DEQUEUE - Removing the front item from the queue.
+'''
 class Queue:
     #Initializing list
     arr = []
