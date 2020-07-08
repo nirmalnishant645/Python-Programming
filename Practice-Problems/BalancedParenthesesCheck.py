@@ -10,3 +10,24 @@ For example, '([])' is balanced but '([)]' is not.
 
 You can assume the input string has no spaces.
 '''
+
+def balance_check(s):
+
+    if len(s) % 2:
+        return False
+    
+    matches = {')' : '(', ']' : '[', '}' : '{'}
+    
+    stack = []
+
+    for paren in s:
+
+        if paren in matches.values():
+            stack.append(paren)
+
+        else:
+
+            if not len(stack) or stack.pop() != matches[paren]:
+                return False
+                
+    return not stack
