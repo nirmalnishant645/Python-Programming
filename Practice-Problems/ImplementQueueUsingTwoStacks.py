@@ -6,13 +6,17 @@ class Queue2Stacks(object):
 
     def __init__(self):
 
-        self.stack1 = []
-        self.stack2 = []
+        self.in_stack = []
+        self.out_stack = []
 
     def enqueue(self, element):
 
-        pass
+        self.in_stack.append(element)
 
-    def dequeue(self, element):
+    def dequeue(self):
 
-        pass
+        if not self.out_stack:
+            while self.in_stack:
+                self.out_stack.append(self.in_stack.pop())
+
+        return self.out_stack.pop()
