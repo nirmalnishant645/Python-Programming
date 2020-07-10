@@ -18,6 +18,8 @@ CONS:
 	In contrast, arrays have a constant time operations to access elements in an array.
 '''
 
+# Node() creates a new node that contains a value and a reference to the next node.
+# It needs value of the node as parameter or it will be assigned as None.
 class Node(object):
 
 	def __init__(self, value = None):
@@ -25,20 +27,24 @@ class Node(object):
 	 self.value = value
 	 self.next_node = None
 
+# LinkedList() creates a new linked list with a head node whose value is None.
+# It needs no parameter and returns a linked list with only a head node.
 class LinkedList(object):
 
 	def __init__(self):
 
 		self.head = Node()
 
-	def append(self, value):
+	# Adds a new node at the end of the linked list.
+	def append(self, value):	# It needs only parameter the value of the new node and returns nothing.
 		new_node = Node(value)
 		cur_node = self.head
 		while cur_node.next_node:
 			cur_node = cur_node.next_node
-		cur_node.next_node = new_node
+		cur_node.next_node = new_node	# Linked List is modified
 
-	def length(self):
+	# Returns the number of nodes in the linked list.
+	def length(self):	# It needs no parameter and returns the length of the linked list.
 		cur_node = self.head
 		total_nodes = 0
 		while cur_node.next_node:
@@ -46,53 +52,58 @@ class LinkedList(object):
 			cur_node = cur_node.next_node
 		return total_nodes
 
-	def display(self):
+	# Displays all the nodes of the linked list in order
+	def display(self):	# It needs no parameter and returns nothing.
 		cur_node = self.head
 		while cur_node.next_node:
 			cur_node = cur_node.next_node
-			print(cur_node.value, end = " ")
-		print('')
+			print(cur_node.value, end = " -> ")	# Only prints each node of the linked list.
+		print('None')
 
-	def __getitem__(self, index):
+	# Getting the value of a node from linked list using index.
+	def __getitem__(self, index):	# It needs index as a parameter and returns the value of the node at that index.
 		if index >= self.length() or index < 0:
-			raise IndexError("Index out of range!")
+			raise IndexError("Index out of range!")	# If the index is not in range of the linked list then error is raised.
 		cur_index = 0
 		cur_node = self.head
 		while True:
 			cur_node = cur_node.next_node
 			if cur_index == index:
-				return cur_node.value
+				return cur_node.value	# Linked List is not modified.
 			cur_index += 1
 
-	def __delitem__(self, index):
+	# Deleting a node from the linked list using index.
+	def __delitem__(self, index):	# It needs index as a parameter and deletes the node at that index but returns nothing.
 		if index >= self.length() or index < 0:
-			raise IndexError("Index out of range!")
+			raise IndexError("Index out of range!")	# If the index is not in range of the linked list then error is raised.
 		cur_index = 0
 		cur_node = self.head
 		while True:
 			last_node = cur_node
 			cur_node = cur_node.next_node
 			if cur_index == index:
-				last_node.next_node = cur_node.next_node
+				last_node.next_node = cur_node.next_node	# Linked list is modified.
 				return None
 			cur_index += 1
 
-	def  __setitem__(self, index, value):
-		if index > self.length() or index < 0:
-			raise IndexError("Index out of range!")
+	# Setting the value of an already existing node of the linked list using index.
+	def  __setitem__(self, index, value):	# It needs index and value as parameters and sets the value of node at that index.
+		if index >= self.length() or index < 0:
+			raise IndexError("Index out of range!")	# If the index is not in range of the linked list then error is raised.
 		cur_node = self.head
 		cur_index = 0
 		while True:
 			cur_node = cur_node.next_node
 			if cur_index == index:
-				cur_node.value = value
+				cur_node.value = value	# Linked List is modified.
 				return None
 			cur_index += 1
 
-	def insert(self, index, value):
+	# Inserting a new node in the linked list using index (Not modiying the node that already exists at that index).
+	def insert(self, index, value):	# It needs index and value as parameters and inserts a new node at that index and pushes the next nodes to next indices.
 		if index > self.length() or index < 0:
-			raise IndexError("Index out of range!")
-		if index == self.length:
+			raise IndexError("Index out of range!")	# If the index is not in range of the linked list then error is raised.
+		if index == self.length:	# It will append a new node if the index passed is equal to the length of the linked list.
 			self.append(value)
 		cur_node = self.head
 		prev_node = self.head
@@ -102,7 +113,7 @@ class LinkedList(object):
 			if cur_index == index:
 				new_node = Node(value)
 				prev_node.next_node = new_node
-				new_node.next_node = cur_node
+				new_node.next_node = cur_node	# Linked list is modified.
 				return None
 			prev_node = prev_node.next_node
 			cur_index += 1
