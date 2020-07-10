@@ -1,3 +1,13 @@
+'''
+A singly linked list is a collection of nodes in a linear sequence.
+Each node stores a reference to an object that is an element of the sequence,
+as well as a reference to the next node.
+List also maintains a member called 'head' that identifies the first node of the list.
+Next reference of a node can be thought of as a link or a pointer to another node.
+
+*It does not have a predetermined fixed size.
+'''
+
 class Node:
 	def __init__(self, data=None):
 		self.data = data
