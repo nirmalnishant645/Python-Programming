@@ -6,110 +6,103 @@ List also maintains a member called 'head' that identifies the first node of the
 Next reference of a node can be thought of as a link or a pointer to another node.
 
 *It does not have a predetermined fixed size.
+
+PROS:
+	Linked lists have a constant insertions and deletions in any position,
+	in comparison, arrays require O(n) time to do the same thing.
+	Linked Lists can continue to expand without having to specify the size ahead of time.
+
+CONS:
+	To access an element in a linked list, you need to take O(k) time
+	to go from the head of the list to the kth element.
+	In contrast, arrays have a constant time operations to access elements in an array.
 '''
 
-class Node:
-	def __init__(self, data=None):
-		self.data = data
-		self.next = None
+class Node(object):
 
-class Linked_list:
+	def __init__(self, value = None):
+	 
+	 self.value = value
+	 self.next_node = None
+
+class LinkedList(object):
+
 	def __init__(self):
+
 		self.head = Node()
 
-	# Adds new node containing 'data' to the end of the linked list.
-	def append(self, data):
-		new_node = Node(data)
-		cur = self.head
-		while cur.next:
-			cur = cur.next
-		cur.next = new_node
+	def append(self, value):
+		new_node = Node(value)
+		cur_node = self.head
+		while cur_node.next_node:
+			cur_node = cur_node.next_node
+		cur_node.next_node = new_node
 
-	# Returns the length (integer) of the linked list.
 	def length(self):
-		cur = self.head
-		total = 0
-		while cur.next != None:
-			total += 1
-			cur = cur.next
-		return total 
+		cur_node = self.head
+		total_nodes = 0
+		while cur_node.next_node:
+			total_nodes += 1
+			cur_node = cur_node.next_node
+		return total_nodes
 
-	# Prints out the linked list. 
 	def display(self):
 		cur_node = self.head
-		while cur_node.next != None:
-			cur_node = cur_node.next
-			print(cur_node.data, end = " ")
+		while cur_node.next_node:
+			cur_node = cur_node.next_node
+			print(cur_node.value, end = " ")
 		print('')
 
-	# Returns the value of the node at 'index'. 
-	def get(self, index):
-		if index >= self.length() or index < 0: 
-			print("ERROR: 'Get' Index out of range!")
-			return None
-		cur_idx = 0
+	def __getitem__(self, index):
+		if index >= self.length() or index < 0:
+			raise IndexError("Index out of range!")
+		cur_index = 0
 		cur_node = self.head
 		while True:
-			cur_node = cur_node.next
-			if cur_idx == index:
-			    return cur_node.data
-			cur_idx += 1
+			cur_node = cur_node.next_node
+			if cur_index == index:
+				return cur_node.value
+			cur_index += 1
 
-	# Deletes the node at index 'index'.
-	def erase(self, index):
+	def __delitem__(self, index):
 		if index >= self.length() or index < 0:
-			print("ERROR: 'Erase' Index out of range!")
-		cur_idx = 0
+			raise IndexError("Index out of range!")
+		cur_index = 0
 		cur_node = self.head
 		while True:
 			last_node = cur_node
-			cur_node = cur_node.next
-			if cur_idx == index:
-				last_node.next = cur_node.next
+			cur_node = cur_node.next_node
+			if cur_index == index:
+				last_node.next_node = cur_node.next_node
 				return None
-			cur_idx += 1
+			cur_index += 1
 
-	# Allows for bracket operator syntax (i.e. a[0] to return first item).
-	def __getitem__(self, index):
-		return self.get(index)
+	def  __setitem__(self, index, value):
+		if index > self.length() or index < 0:
+			raise IndexError("Index out of range!")
+		cur_node = self.head
+		cur_index = 0
+		while True:
+			cur_node = cur_node.next_node
+			if cur_index == index:
+				cur_node.value = value
+				return None
+			cur_index += 1
 
-	'''
-	Inserts a new node at index 'index' containing data 'data'.
-	Indices begin at 0. If the provided index is greater than or 
-	equal to the length of the linked list the 'data' will be appended.
-	If index is less than zero, warning will be printed to the user.
-	'''
-	def insert(self, index, data):
-	    if index >= self.length() or index < 0:
-	        print("ERROR: 'Insert' Index out of range!")
-	    cur_node = self.head
-	    prior_node = self.head
-	    cur_idx = 0
-	    while True:
-		    cur_node = cur_node.next
-		    if cur_idx == index: 
-			    new_node = Node(data)
-			    prior_node.next = new_node
-			    new_node.next = cur_node
-			    return None
-		    prior_node = cur_node
-		    cur_idx += 1
-	
-	'''
-    Sets the data at index 'index' equal to 'data'.
-    Indices begin at 0. If the 'index' is greater than or equal 
-    to the length of the linked list a warning will be printed 
-    to the user.
-    '''	
-	
-	def set(self, index, data):
-	    if index >= self.length() or index < 0:
-	        print("ERROR: 'Set' Index out of range!")
-	    cur_node = self.head
-	    cur_idx = 0
-	    while True:
-	        cur_node = cur_node.next
-	        if cur_idx == index:
-	            cur_node.data = data
-	            return None
-	        cur_idx += 1
+	def insert(self, index, value):
+		if index > self.length() or index < 0:
+			raise IndexError("Index out of range!")
+		if index == self.length:
+			self.append(value)
+		cur_node = self.head
+		prev_node = self.head
+		cur_index = 0
+		while True:
+			cur_node = cur_node.next_node
+			if cur_index == index:
+				new_node = Node(value)
+				prev_node.next_node = new_node
+				new_node.next_node = cur_node
+				return None
+			prev_node = prev_node.next_node
+			cur_index += 1
