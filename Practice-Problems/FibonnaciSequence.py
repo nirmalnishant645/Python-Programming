@@ -27,16 +27,27 @@ def fib_iter(n):
 # Recursively
 def fib_rec(n):
 
-    if not n:
+    # Base Case
+    if not n or n == 1:
 
-        return 0
+        return n
 
-    elif n == 1:
-
-        return 1
-
+    # Recursive Case
     else:
 
         return fib_rec(n - 1) + fib_rec(n - 2)
 
-print(fib_rec(10))
+# Dynamically (Using Memoization to store results)
+lookup_table = {}   # Instantiate Cache Information
+
+def fib_dyn(n):
+
+    if not n or n == 1: # Base Case
+
+        return n
+
+    if not n in lookup_table:   # Check Cache
+
+        lookup_table[n] = fib_rec(n - 1) + fib_rec(n - 2)   # Set Cache
+    
+    return lookup_table[n]
