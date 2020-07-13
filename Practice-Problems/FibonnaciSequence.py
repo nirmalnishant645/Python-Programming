@@ -37,7 +37,7 @@ def fib_rec(n):
 
         return fib_rec(n - 1) + fib_rec(n - 2)
 
-# Dynamically (Using Memoization to store results)
+# Dynamically (Using Memoization to store results) Method 1
 lookup_table = {}   # Instantiate Cache Information
 
 def fib_dyn(n):
@@ -51,3 +51,21 @@ def fib_dyn(n):
         lookup_table[n] = fib_rec(n - 1) + fib_rec(n - 2)   # Set Cache
     
     return lookup_table[n]
+
+# Dynamically (Using Memoization to store results) Method 2
+
+def fib_cache(n, cache = None):
+
+    if not cache:
+
+        cache = [None] * (n + 1)
+
+    if not n or n == 1:
+
+        return n
+    
+    if not cache[n]:
+
+        cache[n] = fib_cache(n - 1, cache) + fib_cache(n - 2, cache)
+
+    return cache[n]
