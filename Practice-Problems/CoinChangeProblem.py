@@ -40,3 +40,38 @@ def rec_coin(target, coins):
             min_coins = min(num_coins, min_coins)
 
     return min_coins
+
+# Dynamic Programming Solution (Efficient)
+def rec_coin_dyn(target, coins, known_results = None):
+
+    if not known_results:
+
+        known_results = [None] * (target + 1)
+
+    # Default output to target
+    min_coins = target
+
+    # Base Case
+    if target in coins:
+
+        known_results[target] = 1
+        return 1
+
+    # Return a known result if it is < 1
+    elif known_results[target]:
+
+        return known_results[target]
+
+    else:
+
+        # For every coin value that is <= target
+        for i in [c for c in coins if c <= target]:
+
+            num_coins = 1 + rec_coin_dyn(target - i, coins, known_results)
+
+            min_coins = min(num_coins, min_coins)
+
+            # Reset known results
+            known_results[target] = min_coins
+            
+    return min_coins
