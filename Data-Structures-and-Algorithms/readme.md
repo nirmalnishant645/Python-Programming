@@ -1,50 +1,48 @@
 # Data Structure
 
-## [x] [Big O Notations](Big-O-Notations.py)
+- [x] [Big O Notations](Big-O-Notations.py)
 
-## [] Arrays and String
+- [ ] Arrays and String
 
-### [x] [Hash Tables](HashTable.py)
+  - [x] [Hash Tables](HashTable.py)
     - A Hash table is a data structure that maps keys to values for highly efficient lookup.
 
-### [x] [ArrayList and Resizable Arrays](Dynamic-Array-Implementation.py)
+    - [x] [ArrayList and Resizable Arrays](Dynamic-Array-Implementation.py)
 
-## [] Linked List
+- [ ] Linked List
 
-### [x] [Singly Linked List](SinglyLinkedList.py)
+    - [x] [Singly Linked List](SinglyLinkedList.py)
 
-## [x] Stacks and Queues
+- [x] Stacks and Queues
 
-### [x] [Stack](Stack.py)
+    - [x] [Stack](Stack.py)
 
-### [x] [Queue](Queue.py)
+    - [x] [Queue](Queue.py)
 
-### [x] [Deque](Deque.py)
+    - [x] [Deque](Deque.py)
 
-## [] Trees and Graphs
+- [ ] Trees and Graphs
 
 # Algorithms
 
-## [x] [Boyer Moore Majority Vote Algorithm](BoyerMooreVoting.py)
+  - [x] [Boyer Moore Majority Vote Algorithm](BoyerMooreVoting.py)
 
-## 
+  - [ ] Bit Manipulation
 
-## [] Bit Manipulation
+  - [ ] Math and Logic
 
-## [] Math and Logic
+  - [ ] Object Oriented Design
 
-## [] Object Oriented Design
+  - [ ] Recursion and Dynamic Programming
 
-## [] Recursion and Dynamic Programming
+    - [x] [Kadane's Algorithm](Kadane's-Algorithm.py)
 
-### [x] [Kadane's Algorithm](Kadane's-Algorithm.py)
+  - [ ] Sorting
 
-## [] Sorting
+    - [x] [Bubble Sort](BubbleSort.py)
 
-### [x] [Bubble Sort](BubbleSort.py)
+  - [ ] Searching
 
-## [] Searching
+    - [x] [Linear Search](LinearSearch.py)
 
-### [x] [Linear Search](LinearSearch.py)
-
-### [x] [Binary Search](BinarySearch.py)
+    - [x] [Binary Search](BinarySearch.py)
