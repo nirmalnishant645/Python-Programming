@@ -5,7 +5,6 @@
 - [ ] Arrays and String
 
   - [x] [Hash Tables](HashTable.py)
-    - A Hash table is a data structure that maps keys to values for highly efficient lookup.
 
     - [x] [ArrayList and Resizable Arrays](Dynamic-Array-Implementation.py)
 
