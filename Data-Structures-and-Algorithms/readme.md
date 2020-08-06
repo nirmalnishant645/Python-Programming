@@ -11,13 +11,12 @@
 - [ ] Linked List
 
     - [x] [Singly Linked List](SinglyLinkedList.py)
+    - [x] [Doubly Linked List](DoublyLinkedList.py) 
 
 - [x] Stacks and Queues
 
     - [x] [Stack](Stack.py)
-
     - [x] [Queue](Queue.py)
-
     - [x] [Deque](Deque.py)
 
 - [ ] Trees and Graphs
@@ -43,5 +42,4 @@
   - [ ] Searching
 
     - [x] [Linear Search](LinearSearch.py)
-
     - [x] [Binary Search](BinarySearch.py)
