@@ -33,6 +33,8 @@
 
   - [ ] Recursion and Dynamic Programming
 
+    - [x] [Recursion](Recursion.py)
+    - [x] [Memoization](Memoization.py)
     - [x] [Kadane's Algorithm](Kadane's-Algorithm.py)
 
   - [ ] Sorting
