@@ -13,13 +13,16 @@
     - [x] [Singly Linked List](SinglyLinkedList.py)
     - [x] [Doubly Linked List](DoublyLinkedList.py) 
 
-- [x] Stacks and Queues
+- [ ] Stacks and Queues
 
     - [x] [Stack](Stack.py)
     - [x] [Queue](Queue.py)
     - [x] [Deque](Deque.py)
 
 - [ ] Trees and Graphs
+
+    - [x] [Representing a Tree as List of Lists](Representing-a-Tree-as-List-of-Lists.py)
+    - [x] [Representing a Tree with Nodes and References](RepresentingTree.py)
 
 # Algorithms
 
