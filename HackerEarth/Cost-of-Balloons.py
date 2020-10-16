@@ -31,4 +31,37 @@ Similarly, if the value of the jth integer in the ith row is 1, then it depicts 
 Output format - 
 
 For each test case, print the minimum cost that you have to pay to purchase balloons.
+
+Sample Input:
+
+2
+9 6
+10
+1 1
+1 1
+0 1
+0 0
+0 1
+0 0
+0 1
+0 1
+1 1
+0 0
+1 9
+10
+0 1
+0 0
+0 0
+0 1
+1 0
+0 1
+0 1
+0 0
+0 1
+0 0
+
+Sample Output:
+
+69
+14
 '''
