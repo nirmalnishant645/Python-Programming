@@ -55,3 +55,47 @@ CONSTRAINTS
 1<=T<=105
 1<=N<=108
 '''
+
+'''
+# Sample code to perform I/O:
+
+name = input()                  # Reading input from STDIN
+print('Hi, %s.' % name)         # Writing output to STDOUT
+
+# Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+'''
+
+# Write your code here
+T = int(input())
+
+while T:
+    N = int(input())
+
+    seat = N%12
+
+    if seat == 1:
+        print(N + 11, 'WS')
+    elif seat == 2:
+        print(N + 9, 'MS')
+    elif seat == 3:
+        print(N + 7, 'AS')
+    elif seat == 4:
+        print(N + 5, 'AS')
+    elif seat == 5:
+        print(N + 3, 'MS')
+    elif seat == 6:
+        print(N + 1, 'WS')
+    elif seat == 7:
+        print(N - 1, 'WS')
+    elif seat == 8:
+        print(N - 3, 'MS')
+    elif seat == 9:
+        print(N - 5, 'AS')
+    elif seat == 10:
+        print(N - 7, 'AS')
+    elif seat == 11:
+        print(N - 9, 'MS')
+    else:
+        print(N - 11, 'WS')
+
+    T -= 1
