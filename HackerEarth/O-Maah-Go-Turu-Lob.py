@@ -34,3 +34,19 @@ In first string, neither all five lowercase vowels are present nor all five uppe
 In second string, all five uppercase vowels are present.
 In third string ,  all five lowercase vowels are present.
 '''
+i = int(input())
+
+while i:
+    upper_case = ['A', 'E', 'I', 'O', 'U']
+    lower_case = ['a', 'e', 'i', 'o', 'u']
+    test_string = input()
+    for j in test_string:
+        if j in upper_case:
+            upper_case.remove(j)
+        elif j in lower_case:
+            lower_case.remove(j)
+    if not upper_case or not lower_case:
+        print('lovely string')
+    else:
+        print('ugly string')
+    i -= 1
