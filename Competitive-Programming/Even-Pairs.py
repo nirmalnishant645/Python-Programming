@@ -11,3 +11,18 @@ Output: true
 Input: "f09r27i8e67"
 Output: false
 '''
+
+def EvenPairs(strParam):
+  for i in range(len(strParam)):
+    count = 0
+    num = ''
+    while i < len(strParam) and '0' <= strParam[i] <= '9':
+      num += strParam[i]
+      temp = int(num)
+      if not temp % 2:
+        num = ''
+        count += 1
+      i += 1
+    if count >= 2:
+      return True
+  return False
