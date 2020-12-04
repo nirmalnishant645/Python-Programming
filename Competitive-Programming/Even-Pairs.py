@@ -12,6 +12,8 @@ Input: "f09r27i8e67"
 Output: false
 '''
 
+# T0 be checked for efficieny
+
 def EvenPairs(strParam):
   for i in range(len(strParam)):
     count = 0
