@@ -14,3 +14,24 @@ Output: true
 Input: ["2,567.00.2"]
 Output: false
 '''
+
+def addCommas(x):
+    if x < 1000:
+        return str(x)
+    else:
+        return addCommas(x // 1000) + ',' + '%03d' % (x % 1000)
+
+def FormattedNumber(strArr):
+    s = strArr.split('.')
+    if len(s) > 2:
+        return False
+    temp = s[0]
+    temp = temp.replace(',', '')
+    temp = int(temp)
+    temp = addCommas(temp)
+    if temp != s[0]:
+        return False
+    for num in s:
+        if num < '0' or num > '9':
+            return False
+    return True
