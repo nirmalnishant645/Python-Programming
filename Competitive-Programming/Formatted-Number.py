@@ -15,6 +15,8 @@ Input: ["2,567.00.2"]
 Output: false
 '''
 
+# Efficiency to be checked
+
 def addCommas(x):
     if x < 1000:
         return str(x)
