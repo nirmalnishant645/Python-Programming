@@ -9,3 +9,14 @@ Example Input
 Example Output
 2
 '''
+
+import requests
+
+r = requests.get('https://coderbyte.com/api/challenges/json/age-counting')
+data = (r.json()['data'])
+total = 0
+for item in data.split(","):
+  if 'age' in item:
+    if int(item[5:]) >= 50:
+      total += 1
+print(total)
