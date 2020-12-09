@@ -21,3 +21,6 @@ SAMPLE INPUT
 SAMPLE OUTPUT 
 6
 '''
+
+x,y,s,t = map(int,input().split())
+print(sum(1 for i in range(s+1) for j in range(s+1) if(x+i+y+j <= t)))
