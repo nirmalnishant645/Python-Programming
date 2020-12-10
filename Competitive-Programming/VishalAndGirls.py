@@ -27,3 +27,12 @@ Sample Output
 Explanation
 He can impress 4+8=12 girls if he runs at his best speed between the 2nd and the 3rd kilometre, inclusive.
 '''
+
+for _ in range(int(input())):
+    n,k = map(int,input().split())
+    arr = list(map(int,input().split()))
+    maxx = 0
+    for i in range(n-k+1):
+        if maxx < sum(arr[i:k+i]):
+            maxx = sum(arr[i:k+i])
+    print(maxx)  
