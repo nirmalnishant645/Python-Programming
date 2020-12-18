@@ -67,22 +67,21 @@ Sample Output:
 '''
 
 T = int(input())
+
 while T:
     purple, green = map(int, input().split())
     n = int(input())
     
-    cost_p1 = cost_g1 = cost_p2 = cost_g2 = 0
+    cost_1 = cost_2 = 0
 
     while n:
         i, j = map(int, input().split())
         
-        cost_p1 += i * purple
-        cost_g1 += j * green
-        cost_p2 += j * purple
-        cost_g2 += i * green
+        cost_1 += i * purple + j * green
+        cost_2 += j * purple + i * green
         
         n -= 1
-    
-    print(min((cost_p1 + cost_g1), (cost_p2 + cost_g2)))
+        
+    print(min(cost_1, cost_2))
 
     T -= 1
