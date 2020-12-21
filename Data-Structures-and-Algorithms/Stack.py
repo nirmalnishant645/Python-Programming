@@ -12,9 +12,12 @@ If you click on the Back Button, you begin to move in reverse order through page
 
 # Stack() creates a new stack that is empty.
 # It needs no parameters and returns an empty stack.
+
+# Implementation of Stack as a Class.
+
 class Stack(object):
 
-    def __init__(self):
+    def __init__(self): # Initialise the Stack
         self.items = []
 
     def isEmpty(self):  # Tests to see whether the stack is empty.
