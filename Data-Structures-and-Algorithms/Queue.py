@@ -6,9 +6,12 @@ DEQUEUE - Removing the front item from the queue.
 
 # Queue() creates a new queue that is empty.
 # It needs no parameters and returns an empty queue.
+
+# Implement Queue as a Class
+
 class Queue(object):
 
-    def __init__(self):
+    def __init__(self): # Intitialise Queue Array using init method
         self.items = []
 
     def isEmpty(self):  # Tests to see whether the queue is empty.
