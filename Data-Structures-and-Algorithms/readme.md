@@ -2,7 +2,7 @@
 
 - [x] [Big O Notations](Big-O-Notations.py)
 
-- [ ] Arrays and String
+- [x] Arrays and String
 
   - [x] [Hash Tables](HashTable.py)
 
@@ -23,6 +23,7 @@
 
     - [x] [Representing a Tree as List of Lists](Representing-a-Tree-as-List-of-Lists.py)
     - [x] [Representing a Tree with Nodes and References](RepresentingTree.py)
+    - [x] [Directed Graph using Adjacency List](Directed-Graph-using-Adjacency-List.py)
 
 # Algorithms
 
