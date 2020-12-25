@@ -29,3 +29,11 @@ g.insertEdge(8, 19)
 g.insertEdge(19, 1)
 
 g.printGraph()
+
+'''
+Output: 
+1  =>  5
+5  =>  8
+8  =>  19
+19  =>  1
+'''
