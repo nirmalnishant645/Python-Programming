@@ -20,3 +20,12 @@ class Graph:
         for node in self.graph:
             for val in self.graph[node]:
                 print(node, ' => ', val) # Loop through the dictionary and print each node and the node that it is pointing to
+
+g = Graph()
+
+g.insertEdge(1, 5)
+g.insertEdge(5, 8)
+g.insertEdge(8, 19)
+g.insertEdge(19, 1)
+
+g.printGraph()
