@@ -17,3 +17,11 @@ class Graph:
             for j in range(len(self.graph[i])):
                 if self.graph[i][j]:
                     print(i, '=>', j)
+
+g = Graph(5)
+
+g.insertEdge(1, 2)
+g.insertEdge(2, 3)
+g.insertEdge(4, 5)
+
+g.printGraph()
