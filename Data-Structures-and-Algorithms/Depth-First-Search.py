@@ -43,3 +43,26 @@ class Graph:
                 for node in self.graph[cur]:
                     if node not in visited:
                         stack.append(node)
+
+# Recursive DFS
+
+class Graph:
+    def __init__(self):
+        self.graph = {}
+
+    def insertEdge(self, v1, v2):
+        if v1 in self.graph:
+            self.graph[v1].append(v2)
+        else:
+            self.graph[v1] = [v2]
+
+    def DFS(self, start, visited = None):
+        if visited is None:
+            visited = set()
+        visited.add(start)
+        print(start, end = " ")
+        if start in self.graph:
+            for node in self.graph[start]:
+                if node not in visited:
+                    self.DFS(node, visited)
+        return visited
