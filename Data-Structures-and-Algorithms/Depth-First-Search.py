@@ -76,3 +76,9 @@ g.insertEdge(5, 8)
 g.insertEdge(6, 9)
 
 g.DFS(2)
+
+'''
+Possible Outputs:
+2 5 8 6 9 1 -> Right
+2 1 5 6 9 8 -> Left
+'''
