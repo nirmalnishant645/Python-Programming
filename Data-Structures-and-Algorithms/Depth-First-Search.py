@@ -15,3 +15,31 @@ Time Complexity: O(V + E)
 Space Complexity: O(V)
 V is number of vertices (nodes), E is number of edges
 '''
+
+# Iterative DFS using Stack
+
+class Graph:
+    def __init__(self):
+        self.graph = {}
+
+    def insertEdge(self, v1, v2):
+        if v1 in self.graph:
+            self.graph[v1].append(v2)
+        else:
+            self.graph[v1] = [v2]
+
+    def DFS(self, start_node):
+        visited, stack = set(), [start_node]
+
+        while stack:
+            cur = stack[-1]
+            stack.pop()
+
+            if cur not in visited:
+                print(cur, end = " ")
+                visited.add(cur)
+            
+            if cur in self.graph:
+                for node in self.graph[cur]:
+                    if node not in visited:
+                        stack.append(node)
