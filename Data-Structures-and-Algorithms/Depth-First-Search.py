@@ -66,3 +66,13 @@ class Graph:
                 if node not in visited:
                     self.DFS(node, visited)
         return visited
+
+g = Graph()
+
+g.insertEdge(2, 1)
+g.insertEdge(2, 5)
+g.insertEdge(5, 6)
+g.insertEdge(5, 8)
+g.insertEdge(6, 9)
+
+g.DFS(2)
