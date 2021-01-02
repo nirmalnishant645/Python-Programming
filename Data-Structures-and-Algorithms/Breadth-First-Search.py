@@ -44,3 +44,13 @@ class Graph:
                    if node not in visited:
                        queue.append(node)
                        visited.add(node)
+
+g = Graph()
+
+g.insertEdge(2, 1)
+g.insertEdge(2, 5)
+g.insertEdge(5, 6)
+g.insertEdge(5, 8)
+g.insertEdge(6, 9)
+
+g.BSF(2)
