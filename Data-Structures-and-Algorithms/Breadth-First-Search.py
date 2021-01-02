@@ -21,3 +21,26 @@ Time Complexity: O(V + E)
 Space Complexity: O(V)
 V is number of vertices (nodes), E is number of edges
 '''
+
+class Graph:
+    def __init__(self):
+        self.graph = {}
+
+    def insertEdge(self, v1, v2):
+        if v1 in self.graph:
+            self.graph[v1].append(v2)
+        else:
+            self.graph[v1] = [v2]
+
+    def BSF(self, start_node):
+        visited, queue = {start_node}, [start_node]
+
+        while queue:
+            cur = queue.pop(0)
+            print(cur, end = " ")
+
+            if cur in self.graph:
+               for node in self.graph[cur]:
+                   if node not in visited:
+                       queue.append(node)
+                       visited.add(node)
