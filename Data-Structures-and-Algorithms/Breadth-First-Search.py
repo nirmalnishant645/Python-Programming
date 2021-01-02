@@ -54,3 +54,8 @@ g.insertEdge(5, 8)
 g.insertEdge(6, 9)
 
 g.BSF(2)
+
+'''
+Output:
+2 1 5 6 8 9
+'''
