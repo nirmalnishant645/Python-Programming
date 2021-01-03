@@ -24,3 +24,20 @@ Output:
 22
 74
 '''
+
+t = int(input())
+
+while t:
+    n, k = input().split(' ')
+    n, k = int(n), int(k)
+    
+    res = n
+    
+    for i in range(k):
+        if not res % 10:
+            break
+        res ^= res % 10
+        
+    print(res)
+    
+    t -= 1
