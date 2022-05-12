@@ -14,7 +14,7 @@ def webhook():
         "owner" : data["owner"],
         "results_link" : data["results_link"],
         "result" : data["result"]}
-        webhook_url = "https://hooks.slack.com/services/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"
+        webhook_url = "<URL>"
         # r = requests.post(webhook_url, data = {"text":param["owner"]}, headers={'Content-Type': 'application/json'})  # Sending data using Post() request as webhook
         print(param)
         return 'success', 200
